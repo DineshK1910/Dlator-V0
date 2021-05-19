@@ -1,0 +1,361 @@
+from math import *
+from tkinter import *
+import tkinter as tk
+from tkinter.font import Font
+inp=''
+e=''
+def st():
+    global inp
+    d=sqrt(int(inp))
+    s.set(str(d))
+def CA():
+    global inp
+    inp=''
+    s.set('')
+def tap(num):
+    global inp
+    inp+=str(num)
+    s.set(inp)
+       
+def eq():
+    try:
+        global inp
+        e=str(eval(inp))
+        s.set(e)
+        inp=""
+    except:
+        s.set('error')
+        s.set('')
+
+def clear():
+    global inp
+    inp=inp[:len(inp)-1]
+    s.set(inp)
+t=tk.Tk()
+t.geometry('720x720')
+t.config(background='#42f2f5')
+t.title('Dlator-V0')
+s=StringVar()
+fnt=Font(family='Futura',
+         size='30',
+         weight='bold'
+        )
+button1=Button(
+    t,
+    text='1',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap(1),
+    height=2,
+    width=5
+)
+button1.grid(row=1,column=0,sticky=NSEW)
+button2=Button(
+    t,
+    text='2',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap(2),
+    height=2,
+    width=5
+)
+button2.grid(row=1,column=1,sticky=NSEW)
+button3=Button(
+    t,
+    text='3',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap(3),
+    height=2,
+    width=5
+)
+button3.grid(row=1,column=2,sticky=NSEW)
+button4=Button(
+    t,
+    text='4',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap(4),
+    height=2,
+    width=5
+)
+button4.grid(row=2,column=0,sticky=NSEW)
+button5=Button(
+    t,
+    text='5',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap(5),
+    height=2,
+    width=5
+)
+button5.grid(row=2,column=1,sticky=NSEW)
+button6=Button(
+    t,
+    text='6',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap(6),
+    height=2,
+    width=5
+)
+button6.grid(row=2,column=2,sticky=NSEW)
+button7=Button(
+    t,
+    text='7',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap(7),
+    height=2,
+    width=5
+)
+button7.grid(row=3,column=0,sticky=NSEW)
+button8=Button(
+    t,
+    text='8',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap(8),
+    height=2,
+    width=5
+)
+button8.grid(row=3,column=1,sticky=NSEW)
+button9=Button(
+    t,
+    text='9',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap(9),
+    height=2,
+    width=5
+)
+button9.grid(row=3,column=2,sticky=NSEW)
+buttoneq=Button(
+    t,
+    text='=',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:eq(),
+    height=2,
+    width=5
+)
+buttoneq.grid(row=5,column=2,sticky=NSEW)
+buttonadd=Button(
+    t,
+    text='+',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap('+'),
+    height=2,
+    width=5
+)
+buttonadd.grid(row=4,column=0,sticky=NSEW)
+buttonsubt=Button(
+    t,
+    text='-',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap('-'),
+    height=2,
+    width=5
+)
+buttonsubt.grid(row=4,column=2,sticky=NSEW)
+buttoncl=Button(
+    t,
+    text='C',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:clear(),
+    height=2,
+    width=5
+)
+buttoncl.grid(row=5,column=3,sticky=NSEW)
+buttondiv=Button(
+    t,
+    text='/',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap('/'),
+    height=2,
+    width=5
+)
+buttondiv.grid(row=4,column=3,sticky=NSEW)
+buttonm=Button(
+    t,
+    text='x',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap('*'),
+    height=2,
+    width=5
+)
+buttonm.grid(row=3,column=3,sticky=NSEW)
+buttond=Button(
+    t,
+    text='.',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap('.'),
+    height=2,
+    width=5
+)
+buttond.grid(row=2,column=3,sticky=NSEW)
+buttonp=Button(
+    t,
+    text='^',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap('**'),
+    height=2,
+    width=5
+)
+buttonp.grid(row=1,column=3,sticky=NSEW)
+buttonz=Button(
+    t,
+    text='0',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:tap(0),
+    height=2,
+    width=5
+)
+buttonz.grid(row=4,column=1,sticky=NSEW)
+buttonce=Button(
+    t,
+    text='CE',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:CA(),
+    height=2,
+    width=5
+)
+buttonce.grid(row=5,column=0,sticky=NSEW)
+buttonsrt=Button(
+    t,
+    text=' √ ',
+    font=fnt,
+    fg='#4245f5',
+    bg='#f58442',
+    activeforeground='#4245f5',
+    activebackground='#42f554',
+    relief=RAISED,
+    state=ACTIVE,
+    command=lambda:st(),
+    height=2,
+    width=5
+)
+buttonsrt.grid(row=5,column=1,sticky=NSEW)
+
+
+label=Entry(
+    t,
+    textvariable=s,
+    font=('Comic sans',40)
+        
+)
+label.grid(columnspan=10,ipadx=5)
+Grid.rowconfigure(t,0,weight=1)
+Grid.rowconfigure(t,1,weight=1)
+Grid.rowconfigure(t,2,weight=1)
+Grid.rowconfigure(t,3,weight=1)
+Grid.rowconfigure(t,4,weight=1)
+Grid.columnconfigure(t,0,weight=1)
+Grid.columnconfigure(t,1,weight=1)
+Grid.columnconfigure(t,2,weight=1)
+Grid.columnconfigure(t,3,weight=1)
+t.mainloop()
