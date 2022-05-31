@@ -2,7 +2,7 @@
 ### It is a GUI(Graphical User Interface) Calculator  containing basic mathematical operations which is made with the help of  tkinter  which is a python module.
 ## How to run it??
 ___
-#### Installing module tkinter on your pc
+#### Installing module tkinter on your pc(Linux)
 ___
 ->open your terminal
 ___
